@@ -1,0 +1,22 @@
+{
+  "name": "donor-connect",
+  "version": "1.0.0",
+  "description": "Blood bank web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khankhushi/Donor-Connect.git"
+  },
+  "author": "Khushi Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khankhushi/Donor-Connect/issues"
+  },
+  "homepage": "https://github.com/khankhushi/Donor-Connect#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
