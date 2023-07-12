@@ -1,22 +1,36 @@
 const express = require("express"); 
+const dotenv = require("dotenv");
+const colors = require("colors");
+const morgan = require("morgan");
+const cors = require("cors");
+const connectDB = require("./config/db");
+// Config
+dotenv.config()
+
+//mongodb connection
+connectDB();
+
 
 //Creating rest object by whose help we can create the server
 const app = express();
 
+// middlewares
+app.use(cors());
+app.use(express.json());
+app.use(morgan('dev'));
 
 // routes
-app.get("/test" ,)
-
+app.use('/api/v1/test', require('./routes/testRoutes'));
 
 //port
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 //LISTEN function
-app.listen(PORT, () => {
     app.listen(PORT, () => {
         console.log(
-          "Node Server Running"
+          `Node Server Running In ${process.env.DEV_MODE} ModeOn Port ${process.env.PORT}`
+      .bgBlue.white
         );
-      })
-  })
+      });
+ 
